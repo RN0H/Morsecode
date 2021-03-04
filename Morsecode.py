@@ -12,8 +12,6 @@ class Morse:
          self.master = root
          self.master.title('Morsecode')
          self.master.geometry('500x200')
-         freqfinder=PhotoImage(file='freqfinder.png')
-         self.master.iconphoto(False,freqfinder)
          #self.master.configure(bg=''.join(random.choice(['light yellow','light red','light blue'])))
          theme = ThemedStyle(self.master)
          theme.set_theme('radiance')
