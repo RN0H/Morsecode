@@ -51,7 +51,7 @@ class Morse:
                print(' '.join(word))
                return self.Ans.config(text = ''.join(word))
 
-
-root = tk.Tk()
-Morse(root)
-root.mainloop()
+if __name__ == "__main__":
+          root = tk.Tk()
+          Morse(root)
+          root.mainloop()
