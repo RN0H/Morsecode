@@ -6,13 +6,13 @@ from ttkthemes import ThemedStyle
 from random import choices,randint
 import random
 
-morse_alphabets = dict(zip(['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],['.-','-...','-.-.','-..','.','..-.','--.','....','..','.---','-.-','.-..','--','-.','---','.--.','--.-','.-.','...','-','..-','...-','.--','-..-','-.--','--..']))
+morse_alphabets = dict(zip(['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],\
+                           ['.-','-...','-.-.','-..','.','..-.','--.','....','..','.---','-.-','.-..','--','-.','---','.--.','--.-','.-.','...','-','..-','...-','.--','-..-','-.--','--..']))
 class Morse:
      def __init__ (self,root):
          self.master = root
          self.master.title('Morsecode')
          self.master.geometry('500x200')
-         #self.master.configure(bg=''.join(random.choice(['light yellow','light red','light blue'])))
          theme = ThemedStyle(self.master)
          theme.set_theme('radiance')
 
@@ -35,7 +35,7 @@ class Morse:
                 for letter in text.lower():
                        for alphabet,morse in morse_alphabets.items():
                                  if  alphabet==letter:
-                                            morsecode.append(morse_alphabets[alphabet])
+                                            morsecode.append(morse)
 
                 print(' '.join(morsecode))
                 return self.Ans.config(text = ' '.join(morsecode))
